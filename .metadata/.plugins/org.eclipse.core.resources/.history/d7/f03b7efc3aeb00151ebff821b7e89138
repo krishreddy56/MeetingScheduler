@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cloudy - free css web template</title>
+<meta name="keywords" content="free css, web template, cloudy" />
+<meta name="description" content="Cloudy - free website template provided by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/featuredcontentglider.css" />
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="css/featuredcontentglider.js">
+/***********************************************
+* Featured Content Glider script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+</script>
+<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+
+</head>
+<body>
+
+<div id="templatemo_wrapper_outer">
+<div id="templatemo_wrapper">
+
+	<div id="temmplatmeo_header">
+    
+   		<div id="site_title">
+           	<a href="#">
+            	
+            	<span>My Cloud Space</span>
+            </a>
+        </div>
+    
+    	<div id="templatemo_menu">
+        
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="#" class="current">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+          		<li><a href="contact.html">Contact </a></li>
+            </ul>    	
+        
+        </div> <!-- end of templatemo_menu -->
+    
+    </div> <!-- end of templatemo_header -->
+    
+    <div id="templatemo_content_wrapper_top"></div>
+    <div id="templatemo_content_wrapper">
+    
+    	
+    
+        <div id="templatemo_banner"><span class="frame"></span>
+        
+			<script type="text/javascript">
+    
+            featuredcontentglider.init({
+                gliderid: "canadaprovinces", //ID of main glider container
+                contentclass: "glidecontent", //Shared CSS class name of each glider content
+                togglerid: "p-select", //ID of toggler container
+                remotecontent: "", //Get gliding contents from external file on server? "filename" or "" to disable
+                selected: 0, //Default selected content index (0=1st)
+                persiststate: false, //Remember last content shown within browser session (true/false)?
+                speed: 500, //Glide animation duration (in milliseconds)
+                direction: "rightleft", //set direction of glide: "updown", "downup", "leftright", or "rightleft"
+                autorotate: true, //Auto rotate contents (true/false)?
+                autorotateconfig: [3000, 2] //if auto rotate enabled, set [milliseconds_btw_rotations, cycles_before_stopping]
+            })
+            
+            </script>
+            
+            <div id="canadaprovinces" class="glidecontentwrapper">
+            
+            <div class="glidecontent">
+                <img src="images/temp3.png" alt="bird" />
+            </div>
+            
+            <div class="glidecontent">
+            <img src="images/temp2.jpg" alt="image" />
+            </div>
+            
+            <div class="glidecontent">
+            <img src="images/TEMP1.jpg" alt="image" />
+            </div>
+            
+            </div>
+            
+            <div id="p-select" class="cssbuttonstoggler">
+            <a href="#" class="toc"><span>1</span></a> <a href="#" class="toc"><span>2</span></a> <a href="#" class="toc"><span>3</span></a>
+            
+            </div>
+        
+        
+</div><!-- end of templatemo_banner -->
+		
+<div id="content">
+        
+        	<div class="full_width">
+            
+            
+            <div id="about">
+            <h1>Welcome to our company</h1>
+            <div class="ab1">
+            
+            <img src="images/l-s.png">
+            
+            <h2>Mission</h2>
+            <li>Getting client Expectation & Employee Growth</li>
+<li>Implementing Ingenuity and Innovative ideas along with continued learning in all our &nbsp;&nbsp;&nbsp;projects.</li>
+<li>Increasing efficiency and maintaining quality standards.</li>
+<li>Maintaining long lasting relationship with clients.</li>
+<li>Be ethical, sincere, committed, goal oriented and respect professionalism.</li><br>
+            <h2>Vision</h2>
+            <p>We provide online backup services to PC World, Currys and Dixons in the UK - which are sold under their Knowhow™ brand - and to CompUSA and TigerDirect in the USA. Our retail partnerships are bringing simple yet powerful cloud storage and online backup to the mass market in the way that no-one else has done before. Find out more about partner retail opportunities.Livedrive also provide a popular reseller package for web designers, system integrators and entrepreneurs.Livedrive is your personal storage space on the Internet. It's unlimited, it's secure and it's there forever. See more about Livedrive's products.  </p>
+            
+
+            </div>
+            </div></div>
+			</div>
+		 <div class="full_width">
+            
+            	<div class="section_w590 margin_r_30">
+                	
+                    <h2 class="current_activities">Special offers	</h2>
+                    <li><a href="#">Brand New Package - Webhost @ JustRs. 999 Per Year</a></li>
+<li><a href="#">FREE Domain Name with Reseller ProPlans (New)</a></li>
+<li><a href="#">Buy any Hosting Plan for 2 years & get 3rd year Hosting free!</a></li>
+
+           	  </div>
+                
+                <div class="section_w280">
+                
+                	<h2 class="newsletter">Newsletter</h2>
+                    
+                    <form action="#" method="get" class="search_box">
+                        <input type="text" value="Enter your email" name="q" size="10" id="searchfield" title="searchfield" onFocus="clearText(this)" onBlur="clearText(this)" />
+                        <input type="submit" name="Search" value="Subscribe" alt="Search" id="searchbutton" title="Search" />
+                    </form>
+                    
+                   </div>
+                
+                <div class="cleaner"></div>
+            
+            </div>
+        
+		</div> <!-- end of content -->
+       </div> 
+<div id="templatemo_content_wrapper_bottom"></div> <!-- end of templatemo_wrapper -->
+
+
+        <div id="templatemo_footer">
+   	     </div>
+</div>
+</body>
+</html>

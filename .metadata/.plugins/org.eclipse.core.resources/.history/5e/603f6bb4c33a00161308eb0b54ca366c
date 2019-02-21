@@ -1,0 +1,48 @@
+package myfirstproject;
+
+import java.util.*;
+
+public class Triangle {
+	 double base;
+	double height;
+	private double sideOne;
+	private double sideTwo;
+	double area;
+	double perimeter;
+	
+	public double area()
+	{
+		
+		area=0.5*base*height;
+		
+		System.out.println("the area of the Triangle is :" +  area);
+		return area;
+	}
+	public double getPerimeter()
+	{
+		perimeter=base+sideOne+sideTwo;
+		
+		System.out.println("the perimeter of the traingle is:"+perimeter);
+		return 0;
+		}
+	public static void main(String args[])
+	{
+		Triangle t=new Triangle();
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the Base;");
+		double base=s.nextDouble();
+		System.out.println("enter the Height;");
+		Scanner s1=new Scanner(System.in);
+		double height=s1.nextDouble();
+		System.out.println("enter the SideOne;");
+		Scanner s2=new Scanner(System.in);
+		double sideOne=s2.nextDouble();
+		System.out.println("enter the SideTwo;");
+		double sideTwo=s.nextDouble();
+		t.area();
+		t.getPerimeter();
+		
+	}
+	
+
+}

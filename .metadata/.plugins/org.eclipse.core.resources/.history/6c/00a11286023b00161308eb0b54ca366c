@@ -1,0 +1,12 @@
+package myfirstproject;
+
+public class Associate {
+	int id;
+	char grade;
+	char designation;
+	int basicpay;
+	public void promoteEmployee(){
+		
+	}
+
+}

@@ -1,0 +1,60 @@
+package myfirstproject;
+
+public class Employee {
+int empId;
+String firstName;
+String designation;
+double basicPay;
+double da;
+static double hraRate=0.3;
+/*public Employee()
+{
+
+}*/
+public int getEmpId() {
+	return empId;
+}
+public void setEmpId(int empId) {
+	this.empId = empId;
+}
+public String getFirstName() {
+	return firstName;
+}
+public void setFirstName(String firstName) {
+	this.firstName = firstName;
+}
+public String getDesignation() {
+	return designation;
+}
+public void setDesignation(String designation) {
+	this.designation = designation;
+}
+public double getBasicPay() {
+	return basicPay;
+}
+public void setBasicPay(double basicPay) {
+	this.basicPay = basicPay;
+}
+public double getDa() {
+	return da;
+}
+public void setDa(double da) {
+	this.da = da;
+}
+public static double getHraRate() {
+	return hraRate;
+}
+public static void setHraRate(double hraRate) {
+	Employee.hraRate = hraRate;
+}
+public Employee(int empId,String firstName,String designation,double basicPay,double da,double hraRate)
+{
+	this.empId=empId;
+	this.firstName=firstName;
+	this.designation=designation;
+	this.basicPay=basicPay;
+	this.da=da;
+	Employee.hraRate=hraRate;
+	
+}
+}

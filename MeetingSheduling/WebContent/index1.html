@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cloudy - free css web template</title>
+<meta name="keywords" content="free css, web template, cloudy" />
+<meta name="description" content="Cloudy - free website template provided by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/featuredcontentglider.css" />
+	<link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="css/featuredcontentglider.js"></script>
+<script type="text/javascript">
+
+function validate(){
+	
+	var names=document.getElementById("fname").value;
+	var password=document.getElementById("pass").value;
+	document.getElementById("pass1").innerHTML="";
+	document.getElementById("uname").innerHTML="";
+	
+	
+	if(names==""){
+		document.getElementById("pass1").innerHTML="";
+		
+		document.getElementById("uname").innerHTML="Enter Name";
+		return false;
+		}
+	if(password==""){
+		document.getElementById("uname").innerHTML="";
+		
+		document.getElementById("pass1").innerHTML="Enter Password";
+		return false;
+		}
+	return true;
+}
+	
+</script>
+</head>
+<body>
+
+<div id="templatemo_wrapper_outer">
+<div id="templatemo_wrapper">
+
+	<div id="temmplatmeo_header">
+    
+   		<div id="site_title">
+           	<a href="#">
+            	
+            	<span>My Cloud Space</span>
+            </a>
+        </div>
+    
+    	<div id="templatemo_menu">
+        
+            <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+          		<li><a href="contact.html">Contact </a></li>
+            </ul>    	
+        
+        </div> <!-- end of templatemo_menu -->
+    
+    </div> <!-- end of templatemo_header -->
+    
+    <div id="templatemo_content_wrapper_top"></div>
+    <div id="templatemo_content_wrapper">
+    
+    	
+    
+        <div id="templatemo_banner"><span class="frame"></span>
+        
+			<script type="text/javascript">
+    
+            featuredcontentglider.init({
+                gliderid: "canadaprovinces", //ID of main glider container
+                contentclass: "glidecontent", //Shared CSS class name of each glider content
+                togglerid: "p-select", //ID of toggler container
+                remotecontent: "", //Get gliding contents from external file on server? "filename" or "" to disable
+                selected: 0, //Default selected content index (0=1st)
+                persiststate: false, //Remember last content shown within browser session (true/false)?
+                speed: 500, //Glide animation duration (in milliseconds)
+                direction: "rightleft", //set direction of glide: "updown", "downup", "leftright", or "rightleft"
+                autorotate: true, //Auto rotate contents (true/false)?
+                autorotateconfig: [3000, 2] //if auto rotate enabled, set [milliseconds_btw_rotations, cycles_before_stopping]
+            })
+            
+            </script>
+            
+            <div id="canadaprovinces" class="glidecontentwrapper">
+            
+            <div class="glidecontent">
+                <img src="images/temp3.png" alt="bird" />
+            </div>
+            
+            <div class="glidecontent">
+            <img src="images/temp2.jpg" alt="image" />
+            </div>
+            
+            <div class="glidecontent">
+            <img src="images/TEMP1.jpg" alt="image" />
+            </div>
+            
+            </div>
+            
+            <div id="p-select" class="cssbuttonstoggler">
+            <a href="#" class="toc"><span>1</span></a> <a href="#" class="toc"><span>2</span></a> <a href="#" class="toc"><span>3</span></a>
+            
+            </div>
+        
+        
+        </div> <!-- end of templatemo_banner -->
+    	    
+    
+    	<div id="content">
+        
+        	<div class="full_width">
+            <div id="first">
+            	<h2>Welcome to Cloud Space</h2>
+                <p>	Cloud storage is a model of networked online storage where data is stored in virtualized pools of storage which are generally hosted by third parties. Hosting companies operate large data centers, and people who require their data to be hosted buy or lease storage capacity from them. The data center operators, in the background, virtualize the resources according to the requirements of the customer and expose them as storage pools, which the customers can themselves use to store files or data objects. Physically, the resource may span across multiple servers. The safety of the files depends upon the hosting websites. </p>
+              <div class="button_01 float_r"><a href="#">Read more</a>
+              </div>
+              </div>
+              <div id="second">
+              
+              <fieldset><legend>Login</legend>
+              <form action="login.jsp" onsubmit="return validate();">
+              <center><span id="invalid"><h1>Invalid User</h1></span></center>
+Enter the Name<br><input type="text" name="fname" id="fname">&nbsp;&nbsp;&nbsp;<span style="font: sans-serif; size: 12; color: red;" id="uname"></span><br>
+Enter the Password<br><input type="password" name="pass" id="pass"></input>&nbsp;&nbsp;&nbsp;<span  style="font: sans-serif; size: 12; color: red;"  id="pass1"></span><br>
+<input type="submit" value="Login" class="sub">
+</form>
+<br>
+
+</fieldset>
+
+</div>
+</div>
+                
+                <div class="cleaner"></div>
+            </div>
+            
+            <div class="full_width">
+            
+            	<div class="section_w280 margin_r_30 w280_bg">
+                
+                	<h2 class="services">Our Services</h2>
+                    
+                    <p>Effectively maintain the availability of their applications    without needing to invest double the amount in the necessary    hardware and software components</p>
+                    
+                    <ul class="service_list">
+                   		<li><a href="#">For 1 Yr, Get One Year Domain Name Free</a></li>
+                      <li><a href="#">For 2 Yrs, Get Third Year Hosting & Two    Years Domain Name Free</a></li>
+                      <li><a href="#">For 4 Yrs, Get Two Years Hosting & Five    Years Domain Name Free</a></li>
+                      <li><a href="#">For 6 Yrs, Get Three Years Hosting & ALL    NINE Years Domain Name Free</a></li>
+                      
+                  </ul>
+                
+                </div>
+                
+                <div class="section_w280 margin_r_30 w280_bg">
+                
+                	<h2 class="portfolio">Our Portfolio</h2>
+                    
+                    <a href="#"><img src="images/templatemo_image_08.png" alt="image" /></a>
+                    
+                  <p>Spending more every year on storage systems and tape silos to store, protect, and retain data that's growing 50% annually is no longer an option. </p>
+                  <p>working more every year on storage systems and tape silos to store, protect, . Management pressure is on to reduce costs and complexity without putting the organization's information and intellectual property at risk.</p>
+              </div>
+                
+                <div class="section_w280 w280_bg">
+                
+                	<h2 class="project">Our Projects</h2>
+                   
+                    <ul class="project_gallery">
+                    	
+                        <li><a href="#"><img src="images/hybrid-cloud-storage.gif" alt="image" /></a></li>
+                        <li><a href="#"><img src="images/cloud-now.gif" alt="image" /></a></li>
+                        <li><a href="#"><img src="images/images.jpg" alt="image" /></a></li>
+                        <li><a href="#"><img src="images/public-cloud-storage.gif" alt="image" /></a></li>
+                        
+                    </ul>
+					
+                    <div class="cleaner"></div>         
+                    <br>
+                           
+                	<div class="button_01 float_r"><a href="#">View All</a></div>
+                </div>
+                
+                <div class="cleaner"></div>
+            
+            </div>
+            
+            <div class="full_width">
+            
+            	<div class="section_w590 margin_r_30">
+                	
+                    <h2 class="current_activities">Special offers	</h2>
+                    <li><a href="#">Brand New Package - Webhost @ JustRs. 999 Per Year</a></li>
+<li><a href="#">FREE Domain Name with Reseller ProPlans (New)</a></li>
+<li><a href="#">Buy any Hosting Plan for 2 years & get 3rd year Hosting free!</a></li>
+<li><a href="#">Free Domain Name worth RS 530 with  Gold, Platinum & Unlimited Hosting Plans.</a></li>
+           	  </div>
+                
+                <div class="section_w280">
+                
+                	<h2 class="newsletter">Newsletter</h2>
+                    
+                    <form action="#" method="get" class="search_box">
+                        <input type="text" value="Enter your email" name="q" size="10" id="searchfield" title="searchfield" onFocus="clearText(this)" onBlur="clearText(this)" />
+                        <input type="submit" name="Search" value="Subscribe" alt="Search" id="searchbutton" title="Search" />
+                    </form>
+                    
+                                </div>
+                
+                <div class="cleaner"></div>
+            
+            </div>
+        
+		</div> <!-- end of content -->
+        
+</div><div id="templatemo_content_wrapper_bottom"></div> <!-- end of templatemo_wrapper -->
+
+        <div id="templatemo_footer">
+   	    </div>
+</div>
+</div>
+</body>
+</html>

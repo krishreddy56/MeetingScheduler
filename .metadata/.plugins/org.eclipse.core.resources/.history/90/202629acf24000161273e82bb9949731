@@ -1,0 +1,53 @@
+package myfirstproject;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Tester {
+public static void main(String[] args) {
+	Scanner s=new Scanner(System.in);
+	System.out.println("enter the id");
+	int empId=s.nextInt();
+	System.out.println("enter the firstname");
+	String firstName=s.next();
+	System.out.println("enter the designation");
+	String designation=s.next();
+	System.out.println("enter the basicpay");
+	int basicPay=s.nextInt();
+	System.out.println("enter the da");
+	int da=s.nextInt();
+	Employee emp=new Employee(empId,firstName,designation,basicPay,da);
+	
+
+	
+	//Employee e1=new Employee(123,"kk","hr",5000,2500);
+	//Employee e2=new Employee(456,"kkr","pa",8000,3000);
+	//Employee e3=new Employee(567,"abc","sqa",6000,2000);
+	//Organisation org=new Organisation("TCS");
+	try
+	{
+		System.out.println("enter the employee id to be added:");
+		int id=s.nextInt();
+		org.addEmployee(s.nextInt());
+		org.addEmployee(e2);
+		org.addEmployee(e3);
+		org.displayDetails();
+		org.removeEmployee(567);
+	}
+	catch (Exception er)
+	{
+		System.out.println(er.getMessage());
+	}
+	System.out.println("list of employees\n");
+	org.displayDetails();
+	ArrayList<Employee> traineeList=org.getEmployeeByDesignation("hr");
+	System.out.println("list of sqa\n");
+	for (Employee e:traineeList)
+	{
+		System.out.println(e.getEmpId()+e.getFirstName());
+		
+	}
+}
+
+}

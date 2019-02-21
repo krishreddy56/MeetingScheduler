@@ -1,0 +1,93 @@
+package myfirstproject;
+
+import java.util.ArrayList;
+
+public class Organisation {
+	String organisationName;
+	ArrayList<Employee> list=new ArrayList<Employee>();
+	public Organisation(String organisationName)
+	{
+		this.organisationName=organisationName;
+	}
+	public void addEmployee(Employee emp) throws EmployeeAlreadyExists
+	{
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==emp.getEmpId())
+			{
+				throw new EmployeeAlreadyExists("employee is already existed");
+			}
+			
+		}
+		list.add(emp);
+	}
+	public void displayDetails()
+	{
+		
+		for (Employee e:list)
+		{
+			System.out.println("employeeid is"+e.getEmpId());
+			System.out.println("employee name is "+e.getFirstName());
+			System.out.println("employee designation is "+e.getDesignation());
+			System.out.println("employee basicpay is "+e.getBasicPay());
+			System.out.println("employee da is "+e.getDa());
+		
+		}
+	}
+	
+	public void removeEmployee(int empId) throws EmployeeNotPresent
+	{
+		boolean idFound=false;
+		Employee objToDelete=null;
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==empId)
+			{
+				idFound=true;
+				objToDelete=e;
+				
+			}
+		}
+		if (idFound=false)
+		{
+			throw new EmployeeNotPresent("employee does not exists");
+		}
+		else
+		
+			list.remove(objToDelete);
+		
+	}
+	/*public double calculateSalary(int empId) throws EmployeeNotPresent
+	{
+		double salary=0.0;
+		boolean idFound=false;
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==empId)
+			{
+			   idFound=true;
+			   salary=e.getBasicPay()+e.getDa()+Employee.getHraRate()*e.getBasicPay();
+			}
+		}
+		if (idFound==false)
+		{
+			throw new EmployeeNotPresent("Employee does not exists");
+		}
+		return salary;
+	}*/
+	
+		
+
+
+	public ArrayList<Employee> getEmployeeByDesignation(String designation)
+	{
+		ArrayList<Employee> tempList=new ArrayList<Employee>();
+		for (Employee e:list)
+		{
+			if (e.getDesignation().equals(designation)){
+				tempList.add(e);
+			}
+		}
+		return tempList;
+	}
+}

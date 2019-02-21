@@ -1,0 +1,14 @@
+package myfirstproject;
+
+//1
+import java.util.ArrayList;
+//import java.util.Scanner;
+
+
+public class Tester {
+public static void main(String[] args) {
+	Organisation org=new Organisation("TCS");
+	org.looper();
+}
+}
+	

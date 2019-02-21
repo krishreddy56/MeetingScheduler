@@ -1,0 +1,90 @@
+package myfirstproject;
+
+import java.util.ArrayList;
+
+public class Organisation {
+	String organisationName;
+	ArrayList<Employee> list;
+	public Organisation(String organisationName)
+	{
+		this.organisationName=organisationName;
+	}
+	public void addEmployee(Employee emp) throws EmployeeAlreadyExists
+	{
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==emp.getEmpId())
+			{
+				throw new EmployeeAlreadyExists("employee is already existed");
+			}
+		
+		}
+		list.add(emp);
+	}
+	public void removeEmployee(int empId) throws EmployeeNotPresent
+	{
+		boolean idFound=false;
+		Employee objToDelete=null;
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==empId)
+			{
+				idFound=true;
+				objToDelete=e;
+				
+			}
+		}
+		if (idFound=false)
+		{
+			throw new EmployeeNotPresent("employee does not exists");
+		}
+		else
+		
+			list.remove(objToDelete);
+		
+	}
+	public double calculateSalary(int empId) throws EmployeeNotPresent
+	{
+		double salary=0.0;
+		boolean idFound=false;
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==empId)
+			{
+			   idFound=true;
+			   salary=e.getBasicPay()+e.getDa()+Employee.getHraRate()*e.getBasicPay();
+			}
+		}
+		if (idFound==false)
+		{
+			throw new EmployeeNotPresent("Employee does not exists");
+		}
+		return salary;
+	}
+	/*public void displayDetails()
+	{
+		
+		for (int i=0;i<list.size();i++)
+		{
+			System.out.println("employeeid is"+list.get(i).getEmpId());
+			System.out.println("employee name is "+list.get(i).getFirstName());
+			System.out.println("employee designation is "+list.get(i).getDesignation());
+			System.out.println("employee basicpay is "+list.get(i).getBasicPay());
+			System.out.println("employee da is "+list.get(i).getDa());
+		
+		}
+		
+
+}*/
+	public ArrayList<Employee> getEmployeeByDesignation(String designation)
+	{
+		ArrayList<Employee> tempList=new ArrayList<Employee>();
+		for (Employee e:tempList)
+		{
+			if (e.getDesignation().equals(designation)){
+				tempList.add(e);
+			}
+		}
+		return tempList;
+	}
+}

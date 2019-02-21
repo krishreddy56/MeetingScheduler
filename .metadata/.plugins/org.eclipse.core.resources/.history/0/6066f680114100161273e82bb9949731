@@ -1,0 +1,201 @@
+package myfirstproject;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Organisation {
+	String organisationName;
+	ArrayList<Employee> list=new ArrayList<Employee>();
+	Scanner s=new Scanner(System.in);
+	public Organisation(String organisationName)
+	{
+		this.organisationName=organisationName;
+	}
+	public void addEmployee(Employee emp) throws EmployeeAlreadyExists
+	{
+		
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==emp.getEmpId())
+			{
+				throw new EmployeeAlreadyExists("employee is already existed");
+			}
+			
+		}
+		list.add(emp);
+	}
+	public void displayDetails()
+	{
+		
+		for (Employee e:list)
+		{
+			System.out.println("employeeid is"+e.getEmpId());
+			System.out.println("employee name is "+e.getFirstName());
+			System.out.println("employee designation is "+e.getDesignation());
+			System.out.println("employee basicpay is "+e.getBasicPay());
+			System.out.println("employee da is "+e.getDa());
+		
+		}
+	}
+	
+	public void removeEmployee(int empId) throws EmployeeNotPresent
+	{
+		boolean idFound=false;
+		Employee objToDelete=null;
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==empId)
+			{
+				idFound=true;
+				objToDelete=e;
+				
+			}
+		}
+		if (idFound=false)
+		{
+			throw new EmployeeNotPresent("employee does not exists");
+		}
+		else
+		
+			list.remove(objToDelete);
+		
+	}
+	public double calculateSalary(int empId) throws EmployeeNotPresent
+	{
+		double salary=0.0;
+		boolean idFound=false;
+		for (Employee e:list)
+		{
+			if (e.getEmpId()==empId)
+			{
+			   idFound=true;
+			   salary=e.getBasicPay()+e.getDa()+Employee.getHraRate()*e.getBasicPay();
+			}
+		}
+		if (idFound==false)
+		{
+			throw new EmployeeNotPresent("Employee does not exists");
+		}
+		System.out.println("the salry is:"+salary);
+		return salary;
+		
+	}
+	void looper()	
+	{
+		System.out.println("Hello Admin"+ " WELCOME TO TCS DATABASE");
+		System.out.println("Do You Want To PROCEED ?"+ "YES----->1" +"NO----->2");
+		//Scanner s=new Scanner(System.in);
+		int c=s.nextInt();
+		if (c==1)
+		{
+			looper2();
+		}
+		else if(c==2)
+		{
+			endit();
+		}
+		else
+		{
+			System.out.println("invalid input");
+			
+		}
+	}
+	void endit()
+	{
+		System.out.println("THANK YOU");
+	}
+	void looper2()
+	{
+		System.out.println(" HOW MAY I HELP YOU "+"\n"+"1.ADD" +"\n"+ "2.REMOVE" +"\n"+"3.CALCULATE"+"\n"+"4.DISPLAY");
+		//Scanner s=new Scanner(System.in);
+		int z=s.nextInt();
+		if (z==1)
+		{
+			System.out.println("enter the id");
+			int empId=s.nextInt();
+			System.out.println("enter the firstname");
+			String firstName=s.next();
+			System.out.println("enter the designation");
+			String designation=s.next();
+			System.out.println("enter the basicpay");
+			int basicPay=s.nextInt();
+			System.out.println("enter the da");
+			int da=s.nextInt();
+			Employee emp=new Employee(empId,firstName,designation,basicPay,da);
+		
+			try
+			{
+				//System.out.println("enter the employee id to be added:");
+				//int id=s.nextInt();
+				addEmployee(emp);
+				System.out.println("successfully added");
+				//org.addEmployee(emp);
+				//org.addEmployee(emp);
+				//org.displayDetails();
+				//org.removeEmployee(emp);
+			}
+			
+			catch (Exception er)
+			{
+				System.out.println(er.getMessage());
+			}
+			looper();
+		}
+		else if (z==2)
+		{
+			System.out.println("enter the id to be removed");
+			int empId=s.nextInt();
+			try
+			{
+			removeEmployee(empId);
+			System.out.println("removed successfully");
+		}
+			catch (Exception er){
+				System.out.println(er.getMessage());
+			}
+			looper();
+		}
+		else if(z==3)
+		{
+			System.out.println("enter the empid to calculate the salary");
+			int empId=s.nextInt();
+			try
+			{
+				calculateSalary(empId);
+			}
+			catch (Exception er)
+			{
+				System.out.println(er.getMessage());
+			}
+			
+			}
+		else if(z==4)
+		{
+			System.out.println("the employee details are:");
+			displayDetails();
+			looper();
+		}
+		else
+		{
+			System.out.println("invalid input");
+		}
+		looper();
+	}
+	
+	
+		
+
+
+	public ArrayList<Employee> getEmployeeByDesignation(String designation)
+	{
+		ArrayList<Employee> tempList=new ArrayList<Employee>();
+		for (Employee e:list)
+		{
+			if (e.getDesignation().equals(designation)){
+				tempList.add(e);
+			}
+		}
+		System.out.println(tempList);
+		return tempList;
+	}
+}
